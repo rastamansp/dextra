@@ -1,0 +1,19 @@
+# Ignorar modulos do node
+server-restify/node_modules
+server-express/node_modules
+
+# Ignorar erros do npm
+server-restify/npm-debug.log
+server-express/npm-debug.log
+
+# Ignorar pasta de cobertura de testes
+server-restify/coverage
+server-restify/.nyc_output
+server-express/coverage
+server-express/.nyc_output
+
+# Ignorar dados do mongo
+data
+
+# Ignorar pasta de scripts
+scripts
