@@ -1,0 +1,170 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Nomes Cadastrados
+        </h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Nomes cadastrados por sexo
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#newNameModal">
+                    Novo Nome
+                </button>
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <p align="right">
+                    <button class="btn btn-primary btn-xs" type="button" ng-click="vm.applySex(1)">
+                        Aplicar Masculino
+                    </button>
+                    <button class="btn btn-primary btn-xs" type="button" ng-click="vm.applySex(0)">
+                        Aplicar Feminino
+                    </button>
+                </p>
+
+                <table st-table="displayedCollection" st-safe-src="vm.names" class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>-</th>
+                            <th>Id</th>
+                            <th st-sort="name">Nome</th>
+                            <th>Sexo</th>
+                            <th>Editar</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                <input st-search="'name'" placeholder="search for firstname" class="input-sm form-control" type="search" />
+                            </th>
+                            <th colspan="3">
+                                <input st-search placeholder="global search" class="input-sm form-control" type="search" />
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="name in vm.names">
+                            <td>
+                                <input type="checkbox" ng-model="vm.selected[$index]">
+                            </td>
+                            <td>{{name._id}}</td>
+                            <td>{{name.name}}</td>
+                            <td>{{name.gender}}</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#updateNameModal" ng-click="vm.selectName($index)">
+                                    Editar
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" class="text-center">
+                                <div st-pagination="" st-items-by-page="vm.itemsByPage" st-displayed-pages="7"></div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col-lg-4">
+        <div class="well">
+            <h4>Busca de Nomes</h4>
+            <p>
+                Tela para realizar busca de nomes cadastrados.<br> Nomes cadastrados são utilizados para pesquisa de sexo dos usuários que confirmaram presença em eventos no facebook
+            </p>
+        </div>
+    </div>
+</div>
+<!-- INICIO MODAL -->
+<div class="modal fade bs-example-modal-lg" id="newNameModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        &times;
+                    </span>
+                </button>
+                <h4 class="modal-title">
+                    Editar Nome
+                </h4>
+            </div>
+
+            <div class="modal-body">
+
+                <form role="form" class="ng-pristine ng-valid">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" ng-model="vm.name.name">
+                        <p class="help-block">Nome.</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Sexo:</label>
+                        <input type="text" class="form-control" placeholder="sexo" ng-model="vm.name.gender">
+                        <p class="help-block">Sexo.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="vm.insertName()">Inserir Nome</button>
+        </div>
+
+    </div>
+</div>
+</div>
+<!-- FIM MODAL -->
+<!-- INICIO MODAL -->
+<div class="modal fade bs-example-modal-lg" id="updateNameModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        &times;
+                    </span>
+                </button>
+                <h4 class="modal-title">
+                    Editar Nome
+                </h4>
+            </div>
+
+            <div class="modal-body">
+
+                <form role="form" class="ng-pristine ng-valid">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" ng-model="vm.name.name">
+                        <p class="help-block">Nome.</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Sexo:</label>
+                        <input type="text" class="form-control" placeholder="sexo" ng-model="vm.name.gender">
+                        <p class="help-block">Sexo.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="vm.updateName()">Editar Nome</button>
+        </div>
+
+    </div>
+</div>
+</div>
+<!-- FIM MODAL -->

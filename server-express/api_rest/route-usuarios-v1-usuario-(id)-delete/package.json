@@ -1,0 +1,10 @@
+{
+    "name": "route-usuarios-v1-usuario-(id)-delete",
+    "description": "Excluir Usuario",
+    "version": "1.0.0",
+    "author": "@pedroalmeida",
+    "type": "api-rest",
+    "route": "/usuarios/v1/usuario/:id",
+    "method": "DELETE",
+    "controller": "v1/index.js"
+}

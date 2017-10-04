@@ -1,0 +1,91 @@
+[
+    {
+        "id_message": "validator",
+        "messages": [
+            {
+                "id_lang": "pt-br",
+                "message": "Campo {{propertie}} invalido."
+            },
+            {
+                "id_lang": "en-us",
+                "message": "Field {{propertie}} invalid."
+            }
+        ]
+    },
+    {
+        "id_message": "400",
+        "messages": [
+            {
+                "id_lang": "pt-br",
+                "message": {
+                    "code": "Erro na validação dos parametros de entrada",
+                    "message": []
+                }
+            },
+            {
+                "id_lang": "en-us",
+                "message": {
+                    "code": "Bad Request",
+                    "message": []
+                }
+            }
+        ]
+    },
+    {
+        "id_message": "401",
+        "messages": [
+            {
+                "id_lang": "pt-br",
+                "message": {
+                    "code": "Não autorizado",
+                    "message": "O pedido não foi aplicado porque não possui credenciais de autenticação válidas para o recurso de destino."
+                }
+            },
+            {
+                "id_lang": "en-us",
+                "message": {
+                    "code": "Unauthorized",
+                    "message": "The request has not been applied because it lacks valid authentication credentials for the target resource."
+                }
+            }
+        ]
+    },
+    {
+        "id_message": "415",
+        "messages": [
+            {
+                "id_lang": "pt-br",
+                "message": {
+                    "code": "Formato do payload não permitido",
+                    "message": "O servidor se recusa a aceitar a solicitação porque o formato do payload está em um formato não suportado."
+                }
+            },
+            {
+                "id_lang": "en-us",
+                "message": {
+                    "code": "Unsupported Media Type",
+                    "message": "The server refuses to accept the request because the payload format is in an unsupported format."
+                }
+            }
+        ]
+    },
+    {
+        "id_message": "500",
+        "messages": [
+            {
+                "id_lang": "pt-br",
+                "message": {
+                    "code": "Erro interno",
+                    "message": "Erro interno, favor contatar o administrador do sistema."
+                }
+            },
+            {
+                "id_lang": "en-us",
+                "message": {
+                    "code": "Internal Error",
+                    "message": "Internal error, please contact your system administrator"
+                }
+            }
+        ]
+    }
+]

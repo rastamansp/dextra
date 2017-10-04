@@ -1,0 +1,11 @@
+[
+    {
+        "id_db": "mongodb",
+        "database": "x-core",
+        "urls": [
+            {
+                "url": "mongodb://localhost:27017"
+            }
+        ]
+    }
+]

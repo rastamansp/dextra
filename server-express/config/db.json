@@ -1,0 +1,7 @@
+[{
+    "id_db": "mongodb",
+    "database": "dextra",
+    "urls": [{
+        "url": "mongodb://localhost:27017"
+    }]
+}]

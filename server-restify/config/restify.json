@@ -1,0 +1,12 @@
+{
+    "createServer": {
+        "name": "x-core",
+        "version": "1.0.0"
+    },
+    "queryParser": {
+        "mapParams": false
+    },
+    "bodyParser": {
+        "mapParams": false
+    }
+}

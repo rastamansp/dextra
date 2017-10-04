@@ -1,0 +1,10 @@
+{
+    "url": "localhost",
+    "port": "32000",
+    "framework": "restify",
+    "auth": "jwt",
+    "modules": {
+        "restify": "serverRestify",
+        "express": "serverExpress"
+    }
+}

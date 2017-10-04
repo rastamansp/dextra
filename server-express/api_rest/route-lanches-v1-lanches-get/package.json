@@ -1,0 +1,10 @@
+{
+    "name": "route-lanches-v1-lanches-get",
+    "description": "Listar lanches",
+    "version": "1.0.0",
+    "author": "@pedroalmeida",
+    "type": "api-rest",
+    "route": "/lanches/v1/lanches",
+    "method": "GET",
+    "controller": "v1/index.js"
+}

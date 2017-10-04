@@ -1,0 +1,10 @@
+{
+    "name": "route-lanches-v1-ingredientes-(id)-get",
+    "description": "Consultar ingrediente",
+    "version": "1.0.0",
+    "author": "@pedroalmeida",
+    "type": "api-rest",
+    "route": "/lanches/v1/ingredientes/:id",
+    "method": "GET",
+    "controller": "v1/index.js"
+}

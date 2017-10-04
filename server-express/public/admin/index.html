@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html ng-app="gwan">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="RASTAWORKS">
+
+    <title>Status Report Admin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/lib/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/lib/bootstrap-toggle/css/bootstrap-toggle.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="dist/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/lib/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- angular-datatables CSS -->
+    <link href="/lib/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Toastr CSS -->
+    <link rel="stylesheet" href="https://npmcdn.com/angular-toastr/dist/angular-toastr.css" />
+
+    <!-- angular-bootstrap-calendar -->
+    <link href="/lib/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.css" rel="stylesheet">
+
+    <!-- jquery-ui-date -->
+    <link href="/lib//jquery-ui/themes/smoothness/jquery-ui.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- HEADER -->
+        <header>
+            <div ui-view="header"></div>
+        </header>
+
+        <div id="page-wrapper">
+            <!-- CONTENT -->
+            <div ui-view="container"></div>
+        </div>
+    </div>
+
+</body>
+
+<!-- jQuery -->
+<script src="/lib/jquery/dist/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="/lib/metisMenu/dist/metisMenu.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<!-- <script src="js/morris-data.js"></script> -->
+
+
+<!-- bootstrap-toggle -->
+<script src="/lib/bootstrap-toggle/js/bootstrap-toggle.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="dist/js/sb-admin-2.js"></script>
+
+<!-- Third-party Libraries -->
+<script src="/lib/angular/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<!-- Lodash -->
+<script src="/lib/ng-lodash/build/ng-lodash.min.js"></script>
+<!-- angular-animate -->
+<script src="/lib/angular-animate/angular-animate.js"></script>
+<!-- angular-messages -->
+<script src="/lib/angular-messages/angular-messages.js"></script>
+<!-- angular-resource -->
+<script src="/lib/angular-resource/angular-resource.js"></script>
+<!-- angular-sanitize -->
+<script src="/lib/angular-sanitize/angular-sanitize.js"></script>
+<!-- angular-ui-router -->
+<script src="/lib/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- toastr -->
+<script src="/lib/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<!-- satellizer -->
+<script src="/lib/satellizer/satellizer.js"></script>
+<!-- angular-bootstrap-calendar -->
+<script src="/lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js"></script>
+<!-- angular-ui-bootstrap -->
+<script src="/lib/angular-bootstrap/ui-bootstrap.js"></script>
+<!-- angular-smart-table -->
+<script src="/lib/angular-smart-table/dist/smart-table.js"></script>
+<!-- moment.js -->
+<script src="/lib/moment/moment.js"></script>
+<script src="/lib/angular-moment/angular-moment.js"></script>
+<!-- ngStorage.js -->
+<script src="/lib/ngstorage/ngStorage.js"></script>
+
+<!-- App Angular -->
+<script src="app.js"></script>
+
+<!-- Controllers -->
+<script src="controllers/menuController.js"></script>
+<script src="controllers/homeController.js"></script>
+<script src="controllers/login.js"></script>
+<script src="controllers/reportController.js"></script>
+<script src="controllers/userProfileController.js"></script>
+<script src="controllers/settingsController.js"></script>
+
+
+<!-- Services -->
+<script src="services/AppService.js"></script>
+<script src="services/AccountService.js"></script>
+<script src="services/LoggerService.js"></script>
+
+</html>

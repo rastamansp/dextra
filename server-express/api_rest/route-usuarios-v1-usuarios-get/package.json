@@ -1,0 +1,10 @@
+{
+    "name": "route-usuarios-v1-usuarios-get",
+    "description": "Listar usuarios",
+    "version": "1.0.0",
+    "author": "@pedroalmeida",
+    "type": "api-rest",
+    "route": "/usuarios/v1/usuarios",
+    "method": "GET",
+    "controller": "v1/index.js"
+}

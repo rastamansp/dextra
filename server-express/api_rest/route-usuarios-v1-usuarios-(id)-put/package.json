@@ -1,0 +1,10 @@
+{
+    "name": "route-usuarios-v1-usuarios-(id)-put",
+    "description": "Atualizar usuario",
+    "version": "1.0.0",
+    "author": "@pedroalmeida",
+    "type": "api-rest",
+    "route": "/usuarios/v1/usuario/:id",
+    "method": "PUT",
+    "controller": "v1/index.js"
+}

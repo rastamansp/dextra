@@ -1,0 +1,17 @@
+{
+    "name": "route-lanches-v1-lanche-post",
+    "description": "Cotar novo lanche",
+    "version": "1.0.0",
+    "author": "@pedroalmeida",
+    "type": "api-rest",
+    "route": "/lanches/v1/lanche",
+    "method": "POST",
+    "controller": "v1/index.js",
+    "scripts": {
+        "start": "node ./bin/start",
+        "start-nodb": "node ./bin/start --nodb",
+        "test": "mocha test/**/**/*.test.js",
+        "test-cover": "nyc --reporter=html npm test",
+        "coverage": "nyc --check-coverage npm test"
+    }
+}

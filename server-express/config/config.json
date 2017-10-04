@@ -1,0 +1,101 @@
+{
+    "type": {
+        "api": "api-rest",
+        "processor": "processors",
+        "service": "services",
+        "localModule": "modules",
+        "util": "utils",
+        "table": "tables",
+        "message": "messages"
+    },
+    "dir": {
+        "apis": "api_rest",
+        "services": [
+            "\\services\\",
+            "\\..\\..\\services\\",
+            "/services/",
+            "/../../services/"
+        ],
+        "processors": [
+            "\\processors\\",
+            "/processors/"
+        ],
+        "modules": [
+            "\\modules\\",
+            "/modules/"
+        ],
+        "utils": [
+            "\\..\\..\\utils\\",
+            "/../../utils/"
+        ],
+        "tables": [
+            "\\..\\..\\tables\\",
+            "/../../tables/"
+        ],
+        "messages": [
+            "\\messages\\",
+            "/messages/"
+        ]
+    },
+    "handlers": [
+        {
+            "name": "auth",
+            "required": false
+        },
+        {
+            "name": "start",
+            "required": true
+        },
+        {
+            "name": "controller",
+            "required": true
+        },
+        {
+            "name": "end",
+            "required": true
+        }
+    ],
+    "package": "package",
+    "db_disable": "--nodb",
+    "restify_methods": {
+        "delete": "del"
+    },
+    "regex": {
+        "remove_modules": "((\\\\|\\/)modules)+",
+        "verify_controller": "((v[0-9]{1})(\\/|\\\\)([a-z])+\\.js)+",
+        "remove_controller": "((\\\\|\\/)([a-z])+\\.js)+"
+    },
+    "methods": [
+        "delete",
+        "get",
+        "head",
+        "patch",
+        "post",
+        "put"
+    ],
+    "profiles": [
+        "develop",
+        "user",
+        "enterprise",
+        "admin"
+    ],
+    "headers": {
+        "content_type": [
+            "application/json"
+        ],
+        "accept": [
+            "application/json",
+            "application/javascript"
+        ],
+        "accept_language": [
+            "pt-br",
+            "en-us"
+        ]
+    },
+    "default": {
+        "value": "system",
+        "lang": "pt-br",
+        "controller": "controller",
+        "messages": "messages"
+    }
+}

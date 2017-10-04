@@ -1,0 +1,12 @@
+{
+  "name": "delete-path-long",
+  "version": "1.0.0",
+  "description": "Apaga diretorios muito longos.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "author": "@douglaspands",
+  "license": "ISC"
+}

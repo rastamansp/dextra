@@ -1,0 +1,336 @@
+<div class="row">
+    <div class="col-lg-12">
+	  <h1 class="page-header">Configurações de Usuario </h1>
+    </div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			   @{{vm.conta.username}}
+			   <button class="btn btn-default pull-right" ng-click="vm.updateAccount()">Salvar</button>
+				<button class="btn btn-default pull-right">Cancelar</button>
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="panel-body">
+
+				<div class="row">
+					<div class="col-lg-6">
+
+						<div class="panel panel-default">
+
+							<div class="panel-heading">
+								Dados de Usuario:
+							</div>
+
+							<div class="panel-body">
+								<form role="form" class="ng-pristine ng-valid form-inline">
+
+									<div class="form-group">
+										<img class="profile-picture" ng-src="{{vm.conta.picture || 'http://placehold.it/100x100'}}">
+									</div>
+									<br>
+
+									<div class="form-group">
+										<label>Username:</label>
+										<p class="form-control-static">{{vm.conta.username}}</p>
+									</div>
+									<br>
+
+									<div class="form-group">
+										<label>Nome:</label>
+										<p class="form-control-static">{{vm.conta.name}}</p>
+									</div>
+									<br>
+
+									<div class="form-group">
+										<label>Website:</label>
+										<p class="form-control-static"><a href="{{vm.conta.website}}">{{vm.conta.website}}</a></p>
+									</div>
+									<br>
+
+									<div class="form-group" ng-show="{{vm.conta.followersCount}}">
+										<label>Seguidores:</label>
+										<p class="form-control-static">{{vm.conta.followersCount}}</p>
+									</div>
+									<br>
+
+									<div class="form-group" ng-show="{{vm.conta.followingCount}}">
+										<label>Seguindo:</label>
+										<p class="form-control-static">{{vm.conta.followingCount}}</p>
+									</div>
+
+								</form>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="col-lg-6">
+						<div class="panel panel-default">
+
+							<div class="panel-heading">
+								Resumo de Atividades
+							</div>
+
+							<div class="panel-body">
+
+									<div class="well">
+
+										<h4>Relatórios</h4>
+
+										<div class="list-group">
+												<a href="#" class="list-group-item">
+													Curtidas
+												</a>
+												<a href="#" class="list-group-item">
+													Seguidores
+												</a>
+												<a href="#" class="list-group-item">
+													Deixou de Seguir
+												</a>
+												<a href="#" class="list-group-item">
+													Seu seguidores
+												</a>
+										    </div>
+
+									</div>
+
+							</div>
+
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="row">
+					<!-- USUARIOS INSPECIONADOS -->
+					<div class="col-lg-6">
+
+						<div class="panel panel-default">
+
+							<div class="panel-heading">
+								Usuarios a serem inspecionados:
+							</div>
+
+							<div class="panel-body">
+								<form role="form" class="ng-pristine ng-valid">
+									<div class="form-group input-group">
+										<input type="text" class="form-control" placeholder="@username" ng-model="vm.userToInspect">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button" ng-click="vm.addUserToInspect(vm.userToInspect)">
+												ADICIONAR</i>
+											</button>
+										</span>
+									</div>
+									<div class="panel panel-default" ng-show="vm.conta.usersToInspect.length > 0">
+										<table class="table table-hover">
+											<tbody>
+												<tr ng-repeat="usuario in vm.conta.usersToInspect">
+													<td>
+														{{usuario.username}}
+													</td>
+													<td class="text-right text-nowrap">
+														<button class="btn btn-xs" data-toggle="modal" data-target="#userModal" ng-click="vm.setUserModal(usuario)">
+															<span class="glyphicon glyphicon-edit"></span>
+														</button>
+														<button class="btn btn-xs" ng-click="vm.removeUserToInspect(usuario)">
+															<span class="glyphicon glyphicon-remove"></span>
+														</button>
+													</td>
+											    </tr>
+										  </tbody>
+										</table>
+									</div>
+								</form>
+						    </div>
+						</div>
+					</div>
+				
+
+					<!-- HASHTAGS INSPECIONADAS -->
+					<div class="col-lg-6">
+
+						<div class="panel panel-default">
+
+							<div class="panel-heading">
+								Hashtags a serem inspecionados:
+							</div>
+
+							<div class="panel-body">
+								<form role="form" class="ng-pristine ng-valid">
+									<div class="form-group input-group">
+										<input type="text" class="form-control" placeholder="#hashtag" ng-model="vm.tag">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button" ng-click="vm.addHashtagToInspect(vm.tag)">
+												ADICIONAR</i>
+											</button>
+										</span>
+									</div>
+									<div class="panel panel-default" ng-show="vm.conta.usersToInspect.length > 0">
+										<table class="table table-hover">
+											<tbody>
+												<tr ng-repeat="tag in vm.conta.hashtagsToInspect">
+													<td>
+														#{{tag}}
+													</td>
+													<td class="text-right text-nowrap">
+														<button class="btn btn-xs" data-toggle="modal" data-target="#userModal" ng-click="vm.setHashtagModal(tag)">
+															<span class="glyphicon glyphicon-edit"></span>
+														</button>
+														<button class="btn btn-xs" ng-click="vm.removeHashtagToInspect(tag)">
+															<span class="glyphicon glyphicon-remove"></span>
+														</button>
+													</td>
+											    </tr>
+										  </tbody>
+										</table>
+									</div>
+								</form>
+						    </div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+				
+					<div class="col-lg-6">
+
+						<div class="panel panel-default">
+
+							<div class="panel-heading">
+								Configurações de interação:
+							</div>
+
+							<div class="panel-body">
+
+								<form role="form" class="ng-pristine ng-valid form-inline">
+
+
+									<div class="form-group">
+										<label>
+											Curtir quem estou seguindo?
+										</label>
+										<input type="checkbox" ng-model="vm.conta.likeFollowing" ng-checked="vm.conta.likeFollowing" data-toggle="toggle" data-onstyle="info" data-offstyle="danger">
+									</div>
+									<br>
+									<div class="form-group">
+										<label>
+											Curtir quem me segue?
+										</label>
+										<input type="checkbox" ng-model="vm.conta.likeFollowers" ng-checked="vm.conta.likeFollowers" data-toggle="toggle" data-onstyle="info" data-offstyle="danger">
+									</div>
+									<br>
+
+									<div class="form-group">
+										<label>Seguir:</label>
+										<input type="checkbox" ng-model="vm.conta.follow" ng-checked="vm.conta.follow" data-toggle="toggle" data-onstyle="info" data-offstyle="danger">
+									</div>
+									<br>
+
+									<div class="form-group">
+										<label>Deixar de Seguir:</label>
+										<input type="checkbox" ng-model="vm.conta.unFollow" ng-checked="vm.conta.unFollow" data-toggle="toggle" data-onstyle="info" data-offstyle="danger">
+									</div>
+									<br>
+
+								</form>
+						    </div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+
+			</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="../vendor/ng-tags-input.js"></script>
+
+<!-- INICIO MODAL -->
+<div class="modal fade bs-example-modal-lg" id="userModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	<div class="modal-dialog" role="document">
+
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">
+					@{{vm.userModal.username}}
+				</h4>
+			</div>
+
+			<div class="modal-body">
+				<div class="panel panel-default">
+
+					<div class="panel-heading">
+						Dados de Usuario:
+					</div>
+
+					<div class="panel-body">
+						<form role="form" class="ng-pristine ng-valid form-inline">
+
+							<div class="form-group">
+								<img class="profile-picture" ng-src="{{vm.userModal.picture || 'http://placehold.it/100x100'}}">
+							</div>
+							<br>
+
+							<div class="form-group">
+								<label>Username:</label>
+								<p class="form-control-static">
+									<a ng-href="http://instagram.com/{{vm.userModal.username}}" target="_blank">{{vm.userModal.username}}</a>
+								</p>
+							</div>
+							<br>
+							<div class="panel panel-default">
+
+							<div class="panel-heading">
+								Configurações de interação:
+							</div>
+
+							<div class="panel-body">
+
+								<form role="form" class="ng-pristine ng-valid form-inline">
+
+
+									<div class="form-group">
+										<label>
+											Curtir seguidores?
+										</label>
+										<input type="checkbox" ng-model="vm.userModal.likeFollowers" ng-checked="vm.userModal.likeFollowers" data-toggle="toggle" data-onstyle="info" data-offstyle="danger">
+									</div>
+									<br>
+									<div class="form-group">
+										<label>
+											Seguir seguidores?
+										</label>
+										<input type="checkbox" ng-model="vm.userModal.followFollowers" ng-checked="vm.userModal.followFollowers" data-toggle="toggle" data-onstyle="info" data-offstyle="danger">
+									</div>
+
+								</form>
+					    </div>
+						</form>
+					</div>
+				</div>
+		</div>
+			<!-- //</div> -->
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" ng-click="vm.editUserToInspect(vm.conta)">Save changes</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!-- FIM MODAL -->
