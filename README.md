@@ -11,6 +11,8 @@ Servidor de APIs REST desenvolvido em Node.js, Express e MongoDB.
 
 Executar os seguintes procedimentos:
 
+PS: Testes Automatizados não implementados
+
 1. Instalar modulos utilizando o comando "npm install" na pasta "./server-express";
 2. Iniciar o servidor do MongoDB ( Ex.: mongod --dbpath ~/workspace/data );
 3. Executar o comando de import dos dados ( Ex.: mongorestore -d dextra bkp );
