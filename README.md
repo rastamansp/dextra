@@ -23,7 +23,8 @@ Executar os seguintes procedimentos:
 9. Realizar cotação de lanche:
 ```
 {
-    "ingredientes": [{
+    "ingredientes": [
+    {
 		"id": 3,
 		"nome": "Hambúrguer de carne",
 		"quantidade": 1
@@ -32,7 +33,8 @@ Executar os seguintes procedimentos:
 		"id": 1,
 		"nome": "Alface",
 		"quantidade": 1
-    },{
+    },
+    {
     	"id": 5,
 		"nome": "Queijo",
 		"quantidade": 1
@@ -43,7 +45,8 @@ Alguns exemplos:
 X-Bacon
 ```
 {
-    "ingredientes": [{
+    "ingredientes": [
+    {
 		"id": 3,
 		"nome": "Hambúrguer de carne",
 		"quantidade": 1
@@ -63,7 +66,8 @@ X-Bacon
 X-burger
 ```
 {
-    "ingredientes": [{
+    "ingredientes": [
+    {
 		"id": 3,
 		"nome": "Hambúrguer de carne",
 		"quantidade": 1
@@ -78,7 +82,8 @@ X-burger
 X-Egg
 ```
 {
-    "ingredientes": [{
+    "ingredientes": [
+    {
 		"id": 3,
 		"nome": "Hambúrguer de carne",
 		"quantidade": 1
@@ -98,7 +103,8 @@ X-Egg
 X-Egg Bacon
 ```
 {
-    "ingredientes": [{
+    "ingredientes": [
+    {
 		"id": 3,
 		"nome": "Hambúrguer de carne",
 		"quantidade": 1
@@ -120,6 +126,87 @@ X-Egg Bacon
     }]
 }
 ```
+9. Realizar cotação de lanche: Alterando quantidades para Assumir descontos:
+Ex com todos descontos:
+```
+{
+    "ingredientes": [
+        {
+		"id": 3,
+		"nome": "Hambúrguer de carne",
+		"quantidade": 4
+    },
+    {
+		"id": 1,
+		"nome": "Alface",
+		"quantidade": 1
+    },
+    {
+    	"id": 5,
+		"nome": "Queijo",
+		"quantidade": 3
+    }]
+}
+```
+Retorno esperado:
+```
+{
+    "data": {
+        "valor": 10.259999999999998,
+        "ingredientes": [
+            {
+                "_id": "59d403ef88b13b75e73dbc33",
+                "id": 1,
+                "nome": "Alface",
+                "valor": 0.4,
+                "__v": 0,
+                "quantidade": 1
+            },
+            {
+                "_id": "59d4041f88b13b75e73dbc35",
+                "id": 3,
+                "nome": "Hambúrguer de carne",
+                "valor": 3,
+                "__v": 0,
+                "quantidade": 4
+            },
+            {
+                "_id": "59d4043d88b13b75e73dbc37",
+                "nome": "Queijo",
+                "id": 5,
+                "valor": 1.5,
+                "__v": 0,
+                "quantidade": 3
+            }
+        ],
+        "descontos": [
+            {
+                "tipo": "Muita carne",
+                "valor": 4
+            },
+            {
+                "tipo": "Muito queijo",
+                "valor": 1.5
+            },
+            {
+                "tipo": "Light",
+                "valor": "10%"
+            }
+        ]
+    }
+}
+```
+10. Para realizar alterações dos valores de ingredientes basta realizar uma chamada PUT http://localhost:32000/lanches/v1/ingredientes/59d403ef88b13b75e73dbc33 enviando chamada similar a:
+```
+{
+    "id": 1,
+    "nome": "Alface",
+    "valor": 0.5
+}
+```
+11. Para rodar testes automatizados executar comando npm test
+12. Para rodar cobertura de testes automatizados rodar "npm start test-cover"
+12.1 Necessário ter instalado Istambul(https://istanbul.js.org/) (Para instalar executar: npm i nyc -g)
 
 ## Recursos ##
 

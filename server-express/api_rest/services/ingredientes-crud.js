@@ -56,17 +56,17 @@ module.exports = function(context) {
     };
 
     /**
-     * Executa a atualização de um usuario.
+     * Executa a atualização de um ingrediente.
      * @public
-     * @function atualizarUsuario
-     * @param {object} usuario Representa um usuario (necessita da propriedade _id).
+     * @function atualizarIngrediente
+     * @param {object} ingrediente Representa um ingrediente (necessita da propriedade _id).
      * @param {object} atualizar Bloco de dados que será atualizado.
      * @param {callback} callback Callback de retorno.
      */
-    funcoes.atualizarUsuario = function(usuario, atualizar, done) {
+    funcoes.atualizarIngrediente = function(ingrediente, atualizar, done) {
 
         // Gerar Query
-        var query = _.clone(usuario);
+        var query = _.clone(ingrediente);
 
         // Converter id
         if (query['_id'] === undefined) {
@@ -93,7 +93,7 @@ module.exports = function(context) {
         };
 
         // Tabela
-        var collection = 'usuarios';
+        var collection = 'ingredientes';
 
         // Executa consulta
         mongodb.update(query, set, collection, function(erro, dados) {
@@ -104,8 +104,8 @@ module.exports = function(context) {
                 // Retorno se a inclusão foi feita com sucesso.
                 if (dados.matchedCount !== 1) {
                     return done({
-                        code: 'Erro no update do usuario.',
-                        message: 'Foi atualizado ' + dados.matchedCount + ' usuarios.'
+                        code: 'Erro no update do ingrediente.',
+                        message: 'Foi atualizado ' + dados.matchedCount + ' ingredientes.'
                     }, null);
                 } else {
                     return done(null, dados);

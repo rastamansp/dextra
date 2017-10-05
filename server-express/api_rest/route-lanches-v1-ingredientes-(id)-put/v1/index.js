@@ -1,11 +1,11 @@
 /**
- * @file Atualizar compra.
+ * @file Atualizar ingrediente.
  * @since 2017-06-12
  * @author @pedroalmeida.
  */
 'use strict';
 /**
- * Controller da API de atualização de compra.
+ * Controller da API de atualização de ingrediente.
  * @public
  * @function controller
  * @param {object} req Objeto com parametros, query e body recebidos pela request http.
@@ -32,7 +32,7 @@ module.exports.controller = function(req, res, context) {
     }
 
     // Chama processor
-    var processor = context.processor('atualizarCompra')(context);
+    var processor = context.processor('atualizarIngrediente')(context);
 
     // Executa processor
     processor.executa(req.params, req.body, function(erro, resultado) {
