@@ -1,7 +1,7 @@
 /**
  * @file Obtendo o modulo de servidor.
- * @since 2017-06-15
- * @author @douglaspands.
+ * @since 2017-07-15
+ * @author @pedroalmeida.
  */
 'use strict';
 // Utilitarios para o ECMAScript

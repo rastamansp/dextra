@@ -1,9 +1,0 @@
-{
-    "crypto": {
-        "update": "startup-carros"
-    },
-    "auth": {
-        "secret": "startup-carros",
-        "expiresIn": 1440
-    }
-}

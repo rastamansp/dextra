@@ -1,7 +1,7 @@
 /**
  * @file Procurar e registrar rotas.
- * @since 2017-05-14
- * @author @douglaspands.
+ * @since 2017-07-14
+ * @author @pedroalmeida.
  */
 'use strict';
 // Modulos

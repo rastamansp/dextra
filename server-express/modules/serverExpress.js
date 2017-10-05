@@ -1,7 +1,7 @@
 /**
  * @file Configurando e parametrizando o servidor Express.
  * @since 2017-07-13
- * @author @douglaspands.
+ * @author @pedroalmeida.
  */
 'use strict';
 // Modulo de tratamento de diretorios

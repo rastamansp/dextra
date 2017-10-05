@@ -1,7 +1,7 @@
 /**
  * @file Gerador de logs.
- * @since 2017-05-20
- * @author @douglaspands.
+ * @since 2017-07-20
+ * @author @pedroalmeida.
  */
 'use strict';
 /**

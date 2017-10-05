@@ -1,7 +1,7 @@
 /**
  * @file Objeto de contexto das rotas.
- * @since 2017-05-14
- * @author @douglaspands.
+ * @since 2017-07-14
+ * @author @pedroalmeida.
  */
 'use strict';
 // Modulo com utilitarios do ECMAScript
@@ -313,36 +313,36 @@ module.exports = options => {
      * @returns {function} Retorna a function do constructor da classe.
      */
     metodos.processorClass = objeto => {
-        return (contexto) => {
-            return obterClasse(objeto, systemConfig.type.processor, 0, systemConfig, contexto);
+            return (contexto) => {
+                return obterClasse(objeto, systemConfig.type.processor, 0, systemConfig, contexto);
+            }
         }
-    }
-    /**
-     * Chamar Service (orientação objeto).
-     * @public
-     * @function serviceClass
-     * @param {string} objeto Nome do objeto.
-     * @returns {function} Retorna a function do constructor da classe.
-     */
+        /**
+         * Chamar Service (orientação objeto).
+         * @public
+         * @function serviceClass
+         * @param {string} objeto Nome do objeto.
+         * @returns {function} Retorna a function do constructor da classe.
+         */
     metodos.serviceClass = objeto => {
-        return (contexto) => {
-            return obterClasse(objeto, systemConfig.type.service, 0, systemConfig, contexto);
+            return (contexto) => {
+                return obterClasse(objeto, systemConfig.type.service, 0, systemConfig, contexto);
+            }
         }
-    }
-    /**
-     * Chamar localModule (orientação objeto).
-     * @public
-     * @function localModuleClass
-     * @param {string} objeto Nome do objeto.
-     * @returns {function} Retorna a function do constructor da classe.
-     */
+        /**
+         * Chamar localModule (orientação objeto).
+         * @public
+         * @function localModuleClass
+         * @param {string} objeto Nome do objeto.
+         * @returns {function} Retorna a function do constructor da classe.
+         */
     metodos.localModuleClass = objeto => {
-        return (contexto) => {
-            return obterClasse(objeto, systemConfig.type.localModule, 0, systemConfig, contexto);
+            return (contexto) => {
+                return obterClasse(objeto, systemConfig.type.localModule, 0, systemConfig, contexto);
+            }
         }
-    }
-    /* 
-     * Retornar modulos disponiveis. 
-     */
+        /* 
+         * Retornar modulos disponiveis. 
+         */
     return metodos;
 };

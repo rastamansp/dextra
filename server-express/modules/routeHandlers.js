@@ -1,7 +1,7 @@
 /**
  * @file Cria lista de execuções que a rota precisa executar.
- * @since 2017-06-17
- * @author @douglaspands.
+ * @since 2017-07-17
+ * @author @pedroalmeida.
  */
 'use strict';
 // Modulo de apoio ao ECMAScript.
@@ -16,24 +16,24 @@ const serverConfig = require('../config/server');
  * @param {object} context Objeto com variaveis de contexto da api.
  */
 module.exports = function(context) {
-    return {
-        /**
-         * @function get
-         * @param {object} route Parametros da rota.
-         * @return {collection} Coleção de funções para execução da rota.
-         */
-        get: route => listaExecucoes(route, context)
-    };
-}
-/**
- * Sequencia de funções que serão executados na chamada da rota.
- * Funções: JSW, GraphQL e Controller são permitidas 
- * @private 
- * @function listaExecucoes
- * @param {object} rota Parametros para execução da rota.
- * @param {object} context Objeto com variaveis de contexto da api.
- * @returns {collection} Coleção de funções para execução da rota.
- */
+        return {
+            /**
+             * @function get
+             * @param {object} route Parametros da rota.
+             * @return {collection} Coleção de funções para execução da rota.
+             */
+            get: route => listaExecucoes(route, context)
+        };
+    }
+    /**
+     * Sequencia de funções que serão executados na chamada da rota.
+     * Funções: JSW, GraphQL e Controller são permitidas 
+     * @private 
+     * @function listaExecucoes
+     * @param {object} rota Parametros para execução da rota.
+     * @param {object} context Objeto com variaveis de contexto da api.
+     * @returns {collection} Coleção de funções para execução da rota.
+     */
 function listaExecucoes(rota, context) {
     // Metodos
     const metodos = {

@@ -1,7 +1,7 @@
 /**
  * @file Inicializando e guardando conexão com o Mongoose.
- * @since 2017-05-21
- * @author @douglaspands.
+ * @since 2017-07-21
+ * @author @pedroalmeida.
  */
 'use strict';
 /**

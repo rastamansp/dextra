@@ -34,6 +34,7 @@ module.exports = function(context) {
                 retorno.data = _.map(resultado, function(ingrediente) {
                     return {
                         _id: ingrediente._id,
+                        id: ingrediente.id,
                         nome: ingrediente.nome,
                         valor: ingrediente.valor,
                         links: [{
